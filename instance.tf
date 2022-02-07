@@ -11,6 +11,7 @@ resource "google_compute_instance" "osconfig-test" {
   }
   network_interface {
     network = "default"
+    access_config {}
   }
   metadata = {
     # This allows the instance to be managed by OS Config. You could add tags to manage to which instances the OS Config policy should apply.
